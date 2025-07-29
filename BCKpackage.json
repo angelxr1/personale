@@ -1,0 +1,16 @@
+{
+  "name": "personale",
+  "version": "1.0.0",
+  "description": "Gestione presenze e ferie",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  }
+}
