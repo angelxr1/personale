@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riepilogo Annuale Presenze e Ferie</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Riepilogo Annuale</h1>
+    <button onclick="location.href='index.html'">Torna al Calendario Mensile</button>
+
+    <div class="card">
+      <div id="yearly-summary-container">
+        <!-- Il riepilogo annuale verrà generato qui dal JavaScript -->
+      </div>
+    </div>
+
+    <div class="card">
+      <div id="vacation-calculator">
+        <h3>Calcolo Ferie Rimanenti</h3>
+        <label for="total-vacation-days">Ferie totali annuali:</label>
+        <input type="number" id="total-vacation-days" value="20">
+        <p>Ferie rimanenti: <span id="remaining-vacation-days"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/yearly_summary.js"></script>
+</body>
+</html>

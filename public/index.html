@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestione Presenze e Ferie</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="top-right-container">
+    <button onclick="location.href='yearly_summary.html'">Visualizza Riepilogo Annuale</button>
+  </div>
+  <h1>Gestione Presenze e Ferie</h1>
+  <div class="container">
+    <div id="calendar-container">
+      <div class="card">
+        <div id="calendar-header">
+          <button id="prev-month">&lt;</button>
+          <h2 id="month-year"></h2>
+          <button id="next-month">&gt;</button>
+        </div>
+        <div id="calendar-weekdays"></div>
+        <div id="calendar"></div>
+      </div>
+    </div>
+
+    <div id="controls-container">
+        <div id="summary" class="card">
+          <h3>Riepilogo Mensile</h3>
+          <p>Giorni Lavorati: <span id="actual-worked-days">0</span></p>
+          <p>Ferie: <span id="vacation-days">0</span></p>
+          <p>Malattia: <span id="sick-days">0</span></p>
+        </div>
+
+        <div id="vacation-list" class="card">
+            <h3>Elenco Ferie del Mese</h3>
+            <ul id="vacation-dates"></ul>
+        </div>
+
+        <div id="legend" class="card">
+            <h3>Legenda</h3>
+            <div class="legend-item"><div class="legend-color" style="background-color: #c8e6c9;"></div>Lavoro</div>
+            <div class="legend-item"><div class="legend-color" style="background-color: #ffcdd2;"></div>Ferie</div>
+            <div class="legend-item"><div class="legend-color" style="background-color: #bbdefb;"></div>Malattia</div>
+            <div class="legend-item"><div class="legend-color" style="background-color: #fff9c4;"></div>Festività</div>
+        </div>
+    </div>
+
+    <div id="event-modal" class="modal">
+      <div class="modal-content card">
+        <span class="close-button">&times;</span>
+        <h3>Gestisci Evento</h3>
+        <form id="event-form">
+          <input type="hidden" id="event-id">
+          <label for="event-date">Data:</label>
+          <input type="text" id="event-date" disabled>
+          <label for="event-type">Tipo:</label>
+          <select id="event-type">
+            <option value="lavoro">Lavoro</option>
+            <option value="ferie">Ferie</option>
+            <option value="malattia">Malattia</option>
+          </select>
+          <button type="submit">Salva</button>
+          <button type="button" id="delete-event">Elimina</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
